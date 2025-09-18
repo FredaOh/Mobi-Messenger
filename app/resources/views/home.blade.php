@@ -1,0 +1,1200 @@
+<x-headlayout>
+<body x-data="{Form: false}" class="">
+    <!--Header-->
+
+    <header class=" bg-white fixed z-50 right-0 left-0 top-0 shadow-md">
+        <nav x-data="{HamburgerButton: false}"
+            class="flex items-center max-w-screen-xl mx-auto justify-between px-4 sm:px-16 py-4 md:py-6">
+            <!--lg:px-20-->
+
+            <a href="#"><img class="h-[40px]" src="./images/mobi_messenger_logo.svg" alt="mobi_messenger_logo">
+            </a>
+
+            <div class=" hidden lg:flex gap-8">
+                <a href="#features" class="hover:text-red-500">Features</a>
+                <a href="#cases" class="hover:text-red-500">Use Cases</a>
+                <a href="#api" class="hover:text-red-500">API Docs</a>
+                <a href="#pricing" class="hover:text-red-500">Pricing</a>
+                <a href="#about" class="hover:text-red-500">About Us</a>
+                <a href="#contact" class="hover:text-red-500">Contact</a>
+            </div>
+            <div class=" hidden lg:flex gap-6">
+                <a href="https://app.mobimessenger.com/app/login"
+                    class=" bg-white hover:bg-red-600 hover:text-white border-2 border-red-600 px-14 py-2 rounded-md text-red-600  font-semibold">
+                    Login</a>
+                <a href="https://app.mobimessenger.com/app/register"
+                    class=" bg-red-600 rounded-md px-14 py-2 hover:bg-red-700 text-white font-semibold">Sign
+                    Up</a>
+            </div>
+
+            <div class="hover:text-red-500 lg:hidden">
+                <button @click="HamburgerButton = !HamburgerButton">
+                    <i class="fa fa-bars pr-2" aria-hidden="true"></i>
+                    Menu</button>
+            </div>
+            <div x-show="HamburgerButton" x-transition
+                class=" lg:hidden fixed z-50 absolute top-full left-0 w-full bg-red-600 text-white ">
+                <div class="flex flex-col gap-4 ">
+                    <a href="#features" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Features</a>
+                    <a href="#cases" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Use Cases</a>
+                    <a href="#pricing" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Pricing</a>
+                    <a href="#api" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">API Docs</a>
+                    <a href="#about" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">About Us</a>
+                    <a href="#contact" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Contact</a>
+                    <a href="https://app.mobimessenger.com/app/login" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:bg-red-700 hover:text-white text-white font-semibold">Login</a>
+                    <a href="https://app.mobimessenger.com/app/register" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:bg-red-700 hover:text-white font-semibold">SignUp</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <!--Hero-->
+    <!--Bulk-->
+    <section>
+        <div class=" bg-rose-50 h-full w-full">
+            <div class="max-w-screen-xl mx-auto px-8 sm:px-16">
+                <div class="pt-24 text-center md:pt-40">
+                    <h1 class="font-bold text-2xl sm:text-2xl md:text-5xl">
+                        Bulk & Transactional SMS Made Effortless</h1>
+                    <p class="text-gray-500 py-6 text-md leading-[27px] md:text-xl sm:w-3/4 mx-auto">Reach your
+                        customers
+                        instantly with reliable, high-delivery messaging through our powerful platform and
+                        developer-friendly API
+                    </p>
+                </div>
+                <div class="flex md:flex-none gap-5 justify-center text-sm sm:text-base font-semibold md:py-6">
+                    <a href="https://app.mobimessenger.com/app/register"
+                        class="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">Get Started</a>
+                    <a href="https://via.placeholder.com/500x400"
+                        class="bg-black text-white px-6 py-3 rounded-md hover:bg-stone-800">View API Docs</a>
+                </div>
+                <div class=" pt-8 py-10 sm:pt-6 md:pb-28 border border-gray-100">
+                    <img class="rounded-lg shadow-xl" src="./images/mobimessenger_dashboard_image.png"
+                        alt="mobimessenger_dashboard_image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Key Features-->
+    <section id="features" class="max-w-screen-xl mx-auto px-8 sm:px-16 py-20">
+
+        <div class=" text-center sm:pt-8">
+            <h2 class="text-2xl font-bold sm:text-2xl md:text-4xl">Key Features</h2>
+            <p class="text-gray-500 pt-6 sm:pt-4 md:pt-6">Powerful messaging capabilities designed for businesses of all
+                sizes</p>
+        </div>
+        <div class="grid grid-cols-1 md:gap-8 pt-10 gap-6 sm:grid-cols-2 md:grid-cols-2   md:py-12">
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-xl h-full 
+            transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4 lg:flex-none"> -->
+                    <i class="fa fa-paper-plane text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl ">Bulk SMS Campaigns</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Send thousands of messages with scheduling, segmentation and
+                        personalization</p>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-200  shadow-md rounded-xl h-full
+            transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-code text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl ">Transactional Messaging via API</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Seamless integration with your applications using a secure API</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-2xl h-full
+            rounded-xl h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-bar-chart text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl">Real-time Delivery Reports</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Track message status engagememt and performance</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-2xl h-full 
+            rounded-xl h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-shield-alt text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl">Secure & Scalable Infrastructure</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Built for performance, privacy and reliability</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Use Cases -->
+    <section id="cases" class="  ">
+        <div class="bg-gray-50 py-20 sm:py-28 ">
+            <div class="max-w-screen-xl mx-auto px-8 sm:px-16">
+
+                <div class="text-center ">
+                    <h3 class="font-bold text-2xl sm:text-2xl md:text-4xl">Use Cases</h3>
+                    <p class="text-gray-500 pt-4 md:pt-6">How businesses are using Mobi Messenger to improve customer
+                        communication</p>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:pt-10 pt-8   md:gap-8 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+                    <!--grid grid-cols-3-->
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl"> <!--py-10-->
+                        <p class="text-red-600 text-xl font-bold ">E-commerce</p>
+                        <p class="pt-4">Send order confirmations, sharing updates, and promotions.</p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Financial Services</p>
+                        <p class="pt-4">Alerts, OTPs, fraud notifications.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Healthcare</p>
+                        <p class="pt-4">Appointment reminders, health tips.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Education</p>
+                        <p class="pt-4">Parent notifications, exam alerts, fee reminders.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Logistics</p>
+                        <p class="pt-4">Delivery updates, driver instructions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for Developers -->
+    <section id="api">
+        <div class="max-w-screen-xl mx-auto px-8 sm:px-16 sm:pt-28 py-20">
+            <div class="text-center">
+                <h4 class="font-bold text-2xl md:text-4xl">Built for Developers</h4>
+                <p class="text-gray-500 pt-4 sm:pt-2 md:pt-6">Simple, RESTful APIs with fast onboarding and
+                    <span class="underline text-red-600"><a href="https://via.placeholder.com/500x400">extensive
+                            documentation</a></span>
+                </p>
+            </div>
+            <p class="font-bold pt-8 text-lg sm:pt-4 md:pt-8">Powerful API for Developers</p>
+            <p class=" pt-2">Our REST API allows you to send and receive messages and programmatically, <br>manage
+                contacts,
+                and access analytics data</p>
+            <ul class="list-disc px-4">
+                <li>API Key management</li>
+                <li>Webhooks for real-time notifications</li>
+                <li>SDKs for popular programming languages</li>
+            </ul>
+            <div class="sm:w-1/2 pt-6"> <!--grid grid-cols-2-->
+                <div class="bg-black border-l-4 border-red-500 rounded-md">
+                    <div class="pl-6">
+                        <pre><code class="text-white text-sm ml-24">
+// Sample API Request
+POST /v1/messages
+Content-Type: application/json
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "to": "+1234567890",
+  "message": "Your OTP is 123456",
+  "sender_id": "MobiMsg"
+}
+        </code></pre>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8">
+                <a href="https://app.mobimessenger.com/app/register"
+                    class="bg-red-600 rounded-md text-white md:py-4 py-2 px-6 md:px-6 font-bold hover:bg-red-700">
+                    Get Started</a>
+            </div>
+        </div>
+    </section>
+    <!--Pricing-->
+    <!-- <div class="bg-gray-100 py-12">
+    <section class="max-w-screen-xl mx-auto px-8 bg-gray-100 sm:px-14 md:px-18 lg:px-18">
+       
+        <div class="bg-white rounded-md shadow-lg pt-10 px-6 text-center">
+            <h5 class="text-xl font-bold sm:text-2xl"><span class="">Flexible</span> Credit Bundles</h5>
+            <p class="text-gray-500 text-sm pt-2">Get started with our credit bundles to unlock premium features and enhance your experience.</p>
+            <div class="py-4 sm:pb-6">   
+            <div class="bg-gray-100 rounded-md pt-2">
+            <p class="text-gray-500">Starting from</p>
+            <p class="pb-4"><span class="text-3xl text-red-500 font-bold">$25</span>
+                <span class="text-gray-500 font-semibold">/100 credits</span></p>
+            </div>
+            </div>
+            <div class="pb-6 sm:pb-8">
+                
+            <button class="bg-red-500 text-white text-sm px-19 sm:px-53 md:px-64 py-1 rounded-sm">Sign Up</button>
+            </div>
+        </div>
+        
+    </section>
+    </div> -->
+
+    <!-- Pricing -->
+    <section id="pricing" class="">
+        <div class="bg-gray-50 py-20">
+            <div class="max-w-screen-xl mx-auto px-8 sm:pt-8 sm:px-16 ">
+                <div class="text-center">
+                    <h5 class="font-bold text-2xl md:text-4xl">Simple, Transparent Pricing </h5>
+                    <p class="text-gray-500 pt-4 md:pt-6">Choose the plan that fits your business needs</p>
+                </div>
+                <div class="grid grid-cols-1 md:gap-8 gap-10 md:pt-12 pt-10 lg:grid md:grid-cols-3">
+                    <div class="bg-white pt-8 md:pt-12 text-center border border-gray-200 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-2xl font-bold">Starter</p>
+
+                        <div class="text-red-500 text-5xl md:text-5xl font-bold pt-4 md:pt-8">Free<span
+                                class="text-gray-500 text-sm font-normal">trial</span></div>
+
+                        <p class="pt-10 md:pt-12 pb-2">Limited Credits</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Basic features</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Community Support</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Email Support</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10">
+                            <a href="https://app.mobimessenger.com/app/register" class="border-2 border-red-500
+                             text-red-500 py-3 px-6 font-semibold rounded-md hover:bg-red-600 hover:text-white">
+                                Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Most Popular -->
+                    <div class="bg-white  text-center border-2 border-red-500 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="px-36 relative">
+                            <p class="text-white bg-red-500 py-1 rounded-2xl text-center absolute -top-4 
+                            inset-x-20 sm:inset-x-28">
+                                Most popular</p>
+                        </div>
+                        <p class="text-2xl font-bold pt-8 md:pt-12">Business</p>
+
+                        <div class="text-red-500 text-5xl font-bold pt-8">Custom</div>
+
+                        <p class="pt-10 px-8 pb-4">Volume discounts</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Premium support</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Advanced features</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">API access</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10 md:pt-12">
+                            <button @click="Form = true" class="bg-red-500 text-white py-4 px-6 font-semibold rounded-md
+                            hover:bg-red-700">
+                                Contact Sales</button>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise  -->
+                    <div class="bg-white pt-10 md:pt-12 text-center border border-gray-200 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-2xl font-bold">Enterprise</p>
+
+                        <div class="text-red-500 text-5xl font-bold pt-8">Custom</div>
+
+                        <p class="pt-10 px-8 pb-4">SLA guarantees</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Dedicated account managers</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Custom routing</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">24/7 priority support</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10">
+                            <button @click="Form = true" class="border-2 border-red-500 text-red-500 py-3 px-6 font-semibold rounded-md
+                                hover:bg-red-600 hover:text-white">
+                                Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section id="about" class="max-w-screen-xl mx-auto px-8 sm:py-16 py-20">
+        <div class="text-center md:pt-12">
+            <h5 class="text-2xl font-bold sm:text-2xl md:text-4xl">Why Choose Mobi Messenger?</h5>
+            <p class="pt-2 text-gray-500 md:pt-6">Here's what sets us apart from other messaging platforms</p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 pt-6 md:grid-cols-2 lg:grid-cols-3 md:pt-8"> <!--grid grid-cols-3-->
+            <div>
+                <div class="flex gap-4">
+                    <i class="fa fa-check-circle text-red-600 text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">High Delivery Rates</p>
+                        <p class="">Our direct carrier connections ensure your messages reach their destination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex gap-4">
+                    <i class="fa fa-building text-red-600 text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">Trusted by businesses</p>
+                        <p class="">Used by companies of all sizes across multiple industries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex gap-4">
+                    <i class="fas fa-headset text-red-600 text-2xl sm:text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">Fast Support</p>
+                        <p class="">Our team is ready to help whenever you need assistance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Customers -->
+    <section id="contact" class="bg-red-600">
+        <div class="max-w-screen-xl mx-auto px-8 sm:pt-20 py-20 sm:px-16 ">
+            <div class="text-center text-white">
+                <h5 class="text-2xl font-bold sm:text-2xl md:text-4xl">Ready to reach your Customers faster?</h5>
+                <p class="pt-4 text-sm md:text-xl sm:pt-2 md:pt-4 ">Start sending messages in minutes with Mobi
+                    Messenger.</p>
+            </div>
+
+            <div class="flex gap-6 justify-center pt-8  ">
+                <a href="https://app.mobimessenger.com/app/register" class="bg-white text-red-600 font-semibold md:py-3 py-2 px-2 md:px-6 rounded-md  
+                md:text-md border-2 border-transparent hover:text-white hover:bg-red-600 hover:border-white">
+                    Get Started</a>
+
+                <button @click="Form = true" class="border-2 
+                border-white font-semibold text-white md:pt-3 py-2 px-2 md:px-6 rounded-md md:text-md 
+                hover:bg-white hover:text-red-600">
+                    Contact Sales</button>
+            </div>
+
+            <!-- Form Pop-Up -->
+
+            <section x-show="Form" x-transition
+                class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+                <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+                <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!-- relative bg-white py-6 w-3xs md:w-1/3 mx-auto px-10 rounded-xl shadow-lg border border-gray-200 -->
+                    <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full py-6 px-10">
+                        <div @click="Form = false" class="relative cursor-pointer">
+                            <i class="fa fa-times absolute -top-2 -right-5" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <div class="text-md sm:text-lg font-semibold py-6 text-center">
+                                <h1><span class="sm:text-lg text-lg text-red-600 ">Hello,</span> please fill the form below
+                                    to contact our Sales Team</h1>
+                            </div>
+                            <form action="/contactform" method="POST">
+                                @csrf
+                                <div class="grid grid-cols-1 justify-center">
+                                    <div class="pb-2">
+                                        <label for="full-name" class=""><span class="font-medium text-sm">Full Name<span
+                                                    class="text-red-500">*</span></span></label>
+                                    </div>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="border-2 focus:outline-none focus:border-red-600 
+                                        w-full px-2 rounded-lg py-1" type="text" id="full-name"
+                                            name="full-name" required>
+                                    </div>
+
+
+                                    <label for="email" class="py-2"><span class="font-medium text-sm">Email Address<span
+                                                class="text-red-500">*</span></span></label>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="border-2 focus:outline-none focus:border-red-600   
+                                            w-full px-2 rounded-lg py-1" type="text" id="email" name="email"
+                                            required>
+                                    </div>
+
+                                    <label for="message" class="py-2"><span class="font-medium text-sm">Message<span
+                                                class="text-red-500">*</span></span></label>
+                                    </label>
+                                    <div class="pb-2">
+                                        <textarea class="border-2 focus:outline-none focus:border-red-600
+                                             w-full pb-16 resize-none py-2 px-2 rounded-lg " type="text"
+                                            id="message" name="message" required></textarea>
+                                    </div>
+                                    <div class="py-4">
+                                           <button class="bg-red-500 px-10 py-2 rounded-lg" type="submit"
+                                                class="text-white font-semibold text-lg">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    {{-- <div class="hidden">
+        <div class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+            <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style="height: 1400px">
+                        content here is wide
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <!-- /Modal -->
+
+    <!-- Footer -->
+    <footer class="bg-black">
+        <section class="max-w-screen-xl mx-auto px-8 pt-10 md:pt-16 sm:px-14 md:px-18 lg:px-18">
+            <div class="grid md:grid-cols-5 grid-cols-1  md:gap-10 gap-8 md:pb-12"> <!--grid grid-cols-5-->
+                <div>
+                    <p class="text-white font-bold text-lg">Mobi Messenger</p>
+                    <p class="text-white pt-2 md:pt-6">Powerful messaging platform for businesses to connect with their
+                        customers
+                        across multiple channels</p>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Company</p>
+                    <ul class="pt-6">
+                        <li> <a class="text-gray-400 hover:text-white" href="#">About Mobiverse</a> </li>
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">Careers</a></li>
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <p class="text-white font-bold text-lg">Legal</p>
+                    <ul class="py-4">
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Privacy Policy</a></li>
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Resources</p>
+                    <ul class="py-2">
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">API Docs</a></li>
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Support/Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Connect</p>
+                    <li class="py-4 list-none">
+                        <i class="fab fa-linkedin text-gray-400"></i>
+                        <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
+                    </li>
+
+                </div>
+            </div>
+
+            <p class="border-y border-slate-50/15"></p>
+            <!-- border-b border-gray-200 -->
+            <p class="text-gray-400 text-center py-4 md:py-6 text-sm">&copy; 2023 Mobi Messenger. All rights reserved.
+            </p>
+        </section>
+    </footer>
+</body>
+
+
+</x-headlayout>
+
+
+
+
+
+
+
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="./images/mobi_messenger_logo.svg">
+    <title>Mobi Messenger - Bulk & Transactional SMS Made Effortless</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{Form: false}" class="">
+    <!--Header-->
+
+    <header class=" bg-white fixed z-50 right-0 left-0 top-0 shadow-md">
+        <nav x-data="{HamburgerButton: false}"
+            class="flex items-center max-w-screen-xl mx-auto justify-between px-4 sm:px-16 py-4 md:py-6">
+            <!--lg:px-20-->
+
+            <a href="#"><img class="h-[40px]" src="./images/mobi_messenger_logo.svg" alt="mobi_messenger_logo">
+            </a>
+
+            <div class=" hidden lg:flex gap-8">
+                <a href="#features" class="hover:text-red-500">Features</a>
+                <a href="#cases" class="hover:text-red-500">Use Cases</a>
+                <a href="#api" class="hover:text-red-500">API Docs</a>
+                <a href="#pricing" class="hover:text-red-500">Pricing</a>
+                <a href="#about" class="hover:text-red-500">About Us</a>
+                <a href="#contact" class="hover:text-red-500">Contact</a>
+            </div>
+            <div class=" hidden lg:flex gap-6">
+                <a href="https://app.mobimessenger.com/app/login"
+                    class=" bg-white hover:bg-red-600 hover:text-white border-2 border-red-600 px-14 py-2 rounded-md text-red-600  font-semibold">
+                    Login</a>
+                <a href="https://app.mobimessenger.com/app/register"
+                    class=" bg-red-600 rounded-md px-14 py-2 hover:bg-red-700 text-white font-semibold">Sign
+                    Up</a>
+            </div>
+
+            <div class="hover:text-red-500 lg:hidden">
+                <button @click="HamburgerButton = !HamburgerButton">
+                    <i class="fa fa-bars pr-2" aria-hidden="true"></i>
+                    Menu</button>
+            </div>
+            <div x-show="HamburgerButton" x-transition
+                class=" lg:hidden fixed z-50 absolute top-full left-0 w-full bg-red-600 text-white ">
+                <div class="flex flex-col gap-4 ">
+                    <a href="#features" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Features</a>
+                    <a href="#cases" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Use Cases</a>
+                    <a href="#pricing" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Pricing</a>
+                    <a href="#api" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">API Docs</a>
+                    <a href="#about" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">About Us</a>
+                    <a href="#contact" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:text-white hover:bg-red-700 font-semibold">Contact</a>
+                    <a href="https://app.mobimessenger.com/app/login" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:bg-red-700 hover:text-white text-white font-semibold">Login</a>
+                    <a href="https://app.mobimessenger.com/app/register" @click="HamburgerButton = false"
+                        class="py-2 px-4 hover:bg-red-700 hover:text-white font-semibold">SignUp</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <!--Hero-->
+    <!--Bulk-->
+    <section>
+        <div class=" bg-rose-50 h-full w-full">
+            <div class="max-w-screen-xl mx-auto px-8 sm:px-16">
+                <div class="pt-24 text-center md:pt-40">
+                    <h1 class="font-bold text-2xl sm:text-2xl md:text-5xl">
+                        Bulk & Transactional SMS Made Effortless</h1>
+                    <p class="text-gray-500 py-6 text-md leading-[27px] md:text-xl sm:w-3/4 mx-auto">Reach your
+                        customers
+                        instantly with reliable, high-delivery messaging through our powerful platform and
+                        developer-friendly API
+                    </p>
+                </div>
+                <div class="flex md:flex-none gap-5 justify-center text-sm sm:text-base font-semibold md:py-6">
+                    <a href="https://app.mobimessenger.com/app/register"
+                        class="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">Get Started</a>
+                    <a href="https://via.placeholder.com/500x400"
+                        class="bg-black text-white px-6 py-3 rounded-md hover:bg-stone-800">View API Docs</a>
+                </div>
+                <div class=" pt-8 py-10 sm:pt-6 md:pb-28 border border-gray-100">
+                    <img class="rounded-lg shadow-xl" src="./images/mobimessenger_dashboard_image.png"
+                        alt="mobimessenger_dashboard_image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Key Features-->
+    <section id="features" class="max-w-screen-xl mx-auto px-8 sm:px-16 py-20">
+
+        <div class=" text-center sm:pt-8">
+            <h2 class="text-2xl font-bold sm:text-2xl md:text-4xl">Key Features</h2>
+            <p class="text-gray-500 pt-6 sm:pt-4 md:pt-6">Powerful messaging capabilities designed for businesses of all
+                sizes</p>
+        </div>
+        <div class="grid grid-cols-1 md:gap-8 pt-10 gap-6 sm:grid-cols-2 md:grid-cols-2   md:py-12">
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-xl h-full 
+            transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4 lg:flex-none"> -->
+                    <i class="fa fa-paper-plane text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl ">Bulk SMS Campaigns</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Send thousands of messages with scheduling, segmentation and
+                        personalization</p>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-200  shadow-md rounded-xl h-full
+            transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-code text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl ">Transactional Messaging via API</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Seamless integration with your applications using a secure API</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-2xl h-full
+            rounded-xl h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-bar-chart text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl">Real-time Delivery Reports</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Track message status engagememt and performance</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200  shadow-md rounded-2xl h-full 
+            rounded-xl h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <div class="py-8 px-8 md:pt-10">
+                    <!-- <div class="flex gap-4"> -->
+                    <i class="fa fa-shield-alt text-red-600 md:pb-4 text-2xl md:text-4xl" aria-hidden="true"></i>
+                    <p class="font-bold md:pb-2 text-md md:text-xl">Secure & Scalable Infrastructure</p>
+                    <!-- </div> -->
+                    <p class="text-gray-500 pt-2">Built for performance, privacy and reliability</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Use Cases -->
+    <section id="cases" class="  ">
+        <div class="bg-gray-50 py-20 sm:py-28 ">
+            <div class="max-w-screen-xl mx-auto px-8 sm:px-16">
+
+                <div class="text-center ">
+                    <h3 class="font-bold text-2xl sm:text-2xl md:text-4xl">Use Cases</h3>
+                    <p class="text-gray-500 pt-4 md:pt-6">How businesses are using Mobi Messenger to improve customer
+                        communication</p>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:pt-10 pt-8   md:gap-8 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+                    <!--grid grid-cols-3-->
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl"> <!--py-10-->
+                        <p class="text-red-600 text-xl font-bold ">E-commerce</p>
+                        <p class="pt-4">Send order confirmations, sharing updates, and promotions.</p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Financial Services</p>
+                        <p class="pt-4">Alerts, OTPs, fraud notifications.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Healthcare</p>
+                        <p class="pt-4">Appointment reminders, health tips.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Education</p>
+                        <p class="pt-4">Parent notifications, exam alerts, fee reminders.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 shadow-md rounded-lg px-8 py-8
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-red-600 text-xl font-bold">Logistics</p>
+                        <p class="pt-4">Delivery updates, driver instructions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for Developers -->
+    <section id="api">
+        <div class="max-w-screen-xl mx-auto px-8 sm:px-16 sm:pt-28 py-20">
+            <div class="text-center">
+                <h4 class="font-bold text-2xl md:text-4xl">Built for Developers</h4>
+                <p class="text-gray-500 pt-4 sm:pt-2 md:pt-6">Simple, RESTful APIs with fast onboarding and
+                    <span class="underline text-red-600"><a href="https://via.placeholder.com/500x400">extensive
+                            documentation</a></span>
+                </p>
+            </div>
+            <p class="font-bold pt-8 text-lg sm:pt-4 md:pt-8">Powerful API for Developers</p>
+            <p class=" pt-2">Our REST API allows you to send and receive messages and programmatically, <br>manage
+                contacts,
+                and access analytics data</p>
+            <ul class="list-disc px-4">
+                <li>API Key management</li>
+                <li>Webhooks for real-time notifications</li>
+                <li>SDKs for popular programming languages</li>
+            </ul>
+            <div class="sm:w-1/2 pt-6"> <!--grid grid-cols-2-->
+                <div class="bg-black border-l-4 border-red-500 rounded-md">
+                    <div class="pl-6">
+                        <pre><code class="text-white text-sm ml-24">
+// Sample API Request
+POST /v1/messages
+Content-Type: application/json
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "to": "+1234567890",
+  "message": "Your OTP is 123456",
+  "sender_id": "MobiMsg"
+}
+        </code></pre>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8">
+                <a href="https://app.mobimessenger.com/app/register"
+                    class="bg-red-600 rounded-md text-white md:py-4 py-2 px-6 md:px-6 font-bold hover:bg-red-700">
+                    Get Started</a>
+            </div>
+        </div>
+    </section>
+    <!--Pricing-->
+    <!-- <div class="bg-gray-100 py-12">
+    <section class="max-w-screen-xl mx-auto px-8 bg-gray-100 sm:px-14 md:px-18 lg:px-18">
+       
+        <div class="bg-white rounded-md shadow-lg pt-10 px-6 text-center">
+            <h5 class="text-xl font-bold sm:text-2xl"><span class="">Flexible</span> Credit Bundles</h5>
+            <p class="text-gray-500 text-sm pt-2">Get started with our credit bundles to unlock premium features and enhance your experience.</p>
+            <div class="py-4 sm:pb-6">   
+            <div class="bg-gray-100 rounded-md pt-2">
+            <p class="text-gray-500">Starting from</p>
+            <p class="pb-4"><span class="text-3xl text-red-500 font-bold">$25</span>
+                <span class="text-gray-500 font-semibold">/100 credits</span></p>
+            </div>
+            </div>
+            <div class="pb-6 sm:pb-8">
+                
+            <button class="bg-red-500 text-white text-sm px-19 sm:px-53 md:px-64 py-1 rounded-sm">Sign Up</button>
+            </div>
+        </div>
+        
+    </section>
+    </div> -->
+
+    <!-- Pricing -->
+    <section id="pricing" class="">
+        <div class="bg-gray-50 py-20">
+            <div class="max-w-screen-xl mx-auto px-8 sm:pt-8 sm:px-16 ">
+                <div class="text-center">
+                    <h5 class="font-bold text-2xl md:text-4xl">Simple, Transparent Pricing </h5>
+                    <p class="text-gray-500 pt-4 md:pt-6">Choose the plan that fits your business needs</p>
+                </div>
+                <div class="grid grid-cols-1 md:gap-8 gap-10 md:pt-12 pt-10 lg:grid md:grid-cols-3">
+                    <div class="bg-white pt-8 md:pt-12 text-center border border-gray-200 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-2xl font-bold">Starter</p>
+
+                        <div class="text-red-500 text-5xl md:text-5xl font-bold pt-4 md:pt-8">Free<span
+                                class="text-gray-500 text-sm font-normal">trial</span></div>
+
+                        <p class="pt-10 md:pt-12 pb-2">Limited Credits</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Basic features</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Community Support</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Email Support</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10">
+                            <a href="https://app.mobimessenger.com/app/register" class="border-2 border-red-500
+                             text-red-500 py-3 px-6 font-semibold rounded-md hover:bg-red-600 hover:text-white">
+                                Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Most Popular -->
+                    <div class="bg-white  text-center border-2 border-red-500 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="px-36 relative">
+                            <p class="text-white bg-red-500 py-1 rounded-2xl text-center absolute -top-4 
+                            inset-x-20 sm:inset-x-28">
+                                Most popular</p>
+                        </div>
+                        <p class="text-2xl font-bold pt-8 md:pt-12">Business</p>
+
+                        <div class="text-red-500 text-5xl font-bold pt-8">Custom</div>
+
+                        <p class="pt-10 px-8 pb-4">Volume discounts</p>
+                        <!-- Border Line-->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Premium support</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Advanced features</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">API access</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10 md:pt-12">
+                            <button @click="Form = true" class="bg-red-500 text-white py-4 px-6 font-semibold rounded-md
+                            hover:bg-red-700">
+                                Contact Sales</button>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise  -->
+                    <div class="bg-white pt-10 md:pt-12 text-center border border-gray-200 rounded-xl shadow-md
+                    transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <p class="text-2xl font-bold">Enterprise</p>
+
+                        <div class="text-red-500 text-5xl font-bold pt-8">Custom</div>
+
+                        <p class="pt-10 px-8 pb-4">SLA guarantees</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200"></p>
+                        </div>
+
+                        <p class="py-3">Dedicated account managers</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">Custom routing</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <p class="py-3">24/7 priority support</p>
+                        <!-- Border Line -->
+                        <div class="px-8">
+                            <p class="border-b border-gray-200 "></p>
+                        </div>
+
+                        <div class="py-10">
+                            <button @click="Form = true" class="border-2 border-red-500 text-red-500 py-3 px-6 font-semibold rounded-md
+                                hover:bg-red-600 hover:text-white">
+                                Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section id="about" class="max-w-screen-xl mx-auto px-8 sm:py-16 py-20">
+        <div class="text-center md:pt-12">
+            <h5 class="text-2xl font-bold sm:text-2xl md:text-4xl">Why Choose Mobi Messenger?</h5>
+            <p class="pt-2 text-gray-500 md:pt-6">Here's what sets us apart from other messaging platforms</p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 pt-6 md:grid-cols-2 lg:grid-cols-3 md:pt-8"> <!--grid grid-cols-3-->
+            <div>
+                <div class="flex gap-4">
+                    <i class="fa fa-check-circle text-red-600 text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">High Delivery Rates</p>
+                        <p class="">Our direct carrier connections ensure your messages reach their destination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex gap-4">
+                    <i class="fa fa-building text-red-600 text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">Trusted by businesses</p>
+                        <p class="">Used by companies of all sizes across multiple industries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex gap-4">
+                    <i class="fas fa-headset text-red-600 text-2xl sm:text-2xl pt-1" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-lg sm:text-md">Fast Support</p>
+                        <p class="">Our team is ready to help whenever you need assistance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Customers -->
+    <section id="contact" class="bg-red-600">
+        <div class="max-w-screen-xl mx-auto px-8 sm:pt-20 py-20 sm:px-16 ">
+            <div class="text-center text-white">
+                <h5 class="text-2xl font-bold sm:text-2xl md:text-4xl">Ready to reach your Customers faster?</h5>
+                <p class="pt-4 text-sm md:text-xl sm:pt-2 md:pt-4 ">Start sending messages in minutes with Mobi
+                    Messenger.</p>
+            </div>
+
+            <div class="flex gap-6 justify-center pt-8  ">
+                <a href="https://app.mobimessenger.com/app/register" class="bg-white text-red-600 font-semibold md:py-3 py-2 px-2 md:px-6 rounded-md  
+                md:text-md border-2 border-transparent hover:text-white hover:bg-red-600 hover:border-white">
+                    Get Started</a>
+
+                <button @click="Form = true" class="border-2 
+                border-white font-semibold text-white md:pt-3 py-2 px-2 md:px-6 rounded-md md:text-md 
+                hover:bg-white hover:text-red-600">
+                    Contact Sales</button>
+            </div>
+
+            <!-- Form Pop-Up -->
+
+            <section x-show="Form" x-transition
+                class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+                <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+                <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!-- relative bg-white py-6 w-3xs md:w-1/3 mx-auto px-10 rounded-xl shadow-lg border border-gray-200 -->
+                    <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full py-6 px-10">
+                        <div @click="Form = false" class="relative cursor-pointer">
+                            <i class="fa fa-times absolute -top-2 -right-5" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <div class="text-md sm:text-lg font-semibold py-6 text-center">
+                                <h1><span class="sm:text-lg text-lg text-red-600 ">Hello,</span> please fill the form below
+                                    to contact our Sales Team</h1>
+                            </div>
+                            <form action="#" method="POST">
+                                <div class="grid grid-cols-1 justify-center">
+                                    <div class="pb-2">
+                                        <label for="full-name" class=""><span class="font-medium text-sm">Full Name<span
+                                                    class="text-red-500">*</span></span></label>
+                                    </div>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="border-2 focus:outline-none focus:border-red-600 
+                                        w-full px-2 rounded-lg py-1" type="text" id="full-name"
+                                            name="full-name" required>
+                                    </div>
+
+
+                                    <label for="email" class="py-2"><span class="font-medium text-sm">Email Address<span
+                                                class="text-red-500">*</span></span></label>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="border-2 focus:outline-none focus:border-red-600   
+                                            w-full px-2 rounded-lg py-1" type="text" id="email" name="email"
+                                            required>
+                                    </div>
+
+                                    <label for="message" class="py-2"><span class="font-medium text-sm">Message<span
+                                                class="text-red-500">*</span></span></label>
+                                    </label>
+                                    <div class="pb-2">
+                                        <textarea class="border-2 focus:outline-none focus:border-red-600
+                                             w-full pb-16 resize-none py-2 px-2 rounded-lg " type="text"
+                                            id="message" name="message" required></textarea>
+                                    </div>
+                                    <div class="py-4">
+                                        <a href="mailto:clientservices@mobivs.com?subject=Business+Account"
+                                            class="bg-red-500 px-10 py-2 rounded-lg"><button type="submit"
+                                                class="text-white font-semibold text-lg">
+                                                Submit</button></a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="hidden">
+        <div class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+            <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style="height: 1400px">
+                        content here is wide
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
+    <!-- Footer -->
+    <footer class="bg-black">
+        <section class="max-w-screen-xl mx-auto px-8 pt-10 md:pt-16 sm:px-14 md:px-18 lg:px-18">
+            <div class="grid md:grid-cols-5 grid-cols-1  md:gap-10 gap-8 md:pb-12"> <!--grid grid-cols-5-->
+                <div>
+                    <p class="text-white font-bold text-lg">Mobi Messenger</p>
+                    <p class="text-white pt-2 md:pt-6">Powerful messaging platform for businesses to connect with their
+                        customers
+                        across multiple channels</p>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Company</p>
+                    <ul class="pt-6">
+                        <li> <a class="text-gray-400 hover:text-white" href="#">About Mobiverse</a> </li>
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">Careers</a></li>
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <p class="text-white font-bold text-lg">Legal</p>
+                    <ul class="py-4">
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Privacy Policy</a></li>
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Resources</p>
+                    <ul class="py-2">
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">API Docs</a></li>
+                        <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Support/Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold text-lg">Connect</p>
+                    <li class="py-4 list-none">
+                        <i class="fab fa-linkedin text-gray-400"></i>
+                        <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
+                    </li>
+
+                </div>
+            </div>
+
+            <p class="border-y border-slate-50/15"></p>
+            <!-- border-b border-gray-200 -->
+            <p class="text-gray-400 text-center py-4 md:py-6 text-sm">&copy; 2023 Mobi Messenger. All rights reserved.
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html> --}}
