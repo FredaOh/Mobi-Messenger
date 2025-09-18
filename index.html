@@ -11,7 +11,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="  ">
+<body x-data="{Form: false}" class="">
     <!--Header-->
 
     <header class=" bg-white fixed z-50 right-0 left-0 top-0 shadow-md">
@@ -85,10 +85,10 @@
                     </p>
                 </div>
                 <div class="flex md:flex-none gap-5 justify-center text-sm sm:text-base font-semibold md:py-6">
-                    <a href="https://app.mobimessenger.com/app/register" 
-                    class="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">Get Started</a>
-                    <a href="https://via.placeholder.com/500x400" 
-                    class="bg-black text-white px-6 py-3 rounded-md hover:bg-stone-800">View API Docs</a>
+                    <a href="https://app.mobimessenger.com/app/register"
+                        class="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">Get Started</a>
+                    <a href="https://via.placeholder.com/500x400"
+                        class="bg-black text-white px-6 py-3 rounded-md hover:bg-stone-800">View API Docs</a>
                 </div>
                 <div class=" pt-8 py-10 sm:pt-6 md:pb-28 border border-gray-100">
                     <img class="rounded-lg shadow-xl" src="./images/mobimessenger_dashboard_image.png"
@@ -354,9 +354,9 @@ Authorization: Bearer YOUR_API_KEY
                         </div>
 
                         <div class="py-10 md:pt-12">
-                            <a href="mailto:clientservices@mobivs.com?subject=Business+Account" class="bg-red-500 text-white py-4 px-6 font-semibold rounded-md
+                            <button @click="Form = true" class="bg-red-500 text-white py-4 px-6 font-semibold rounded-md
                             hover:bg-red-700">
-                                Contact Sales</a>
+                                Contact Sales</button>
                         </div>
                     </div>
 
@@ -392,9 +392,9 @@ Authorization: Bearer YOUR_API_KEY
                         </div>
 
                         <div class="py-10">
-                            <a href="mailto:clientservices@mobivs.com" class="border-2 border-red-500 text-red-500 py-3 px-6 font-semibold rounded-md
+                            <button @click="Form = true" class="border-2 border-red-500 text-red-500 py-3 px-6 font-semibold rounded-md
                                 hover:bg-red-600 hover:text-white">
-                                Contact Sales</a>
+                                Contact Sales</button>
                         </div>
                     </div>
                 </div>
@@ -457,13 +457,93 @@ Authorization: Bearer YOUR_API_KEY
                 <a href="https://app.mobimessenger.com/app/register" class="bg-white text-red-600 font-semibold md:py-3 py-2 px-2 md:px-6 rounded-md  
                 md:text-md border-2 border-transparent hover:text-white hover:bg-red-600 hover:border-white">
                     Get Started</a>
-                <a href="mailto:clientservices@mobivs.com?subject=Business+Account" class="border-2 
+
+                <button @click="Form = true" class="border-2 
                 border-white font-semibold text-white md:pt-3 py-2 px-2 md:px-6 rounded-md md:text-md 
                 hover:bg-white hover:text-red-600">
-                    Contact Sales</a>
+                    Contact Sales</button>
             </div>
+
+            <!-- Form Pop-Up -->
+
+            <section x-show="Form" x-transition
+                class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+                <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+                <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!-- relative bg-white py-6 w-3xs md:w-1/3 mx-auto px-10 rounded-xl shadow-lg border border-gray-200 -->
+                    <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full py-6 px-10">
+                        <div @click="Form = false" class="relative cursor-pointer">
+                            <i class="fa fa-times absolute top-full right-0" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <div class="text-sm sm:text-lg font-semibold py-4 text-center">
+                                <h1><span class="sm:text-lg text-lg text-red-600 ">Hello,</span> please fill the form below
+                                    to contact our Sales Team</h1>
+                            </div>
+                            <form action="#" method="POST">
+                                <div class="grid grid-cols-1 justify-center">
+                                    <div class="pb-2">
+                                        <label for="full-name" class=""><span class="font-medium text-sm">Full Name<span
+                                                    class="text-red-500">*</span></span></label>
+                                    </div>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="ring-1 ring-gray-300 focus:outline-none focus:ring-red-600
+                                        focus:ring-2 w-full px-2 rounded-lg py-1" type="text" id="full-name"
+                                            name="full-name" required>
+                                    </div>
+
+
+                                    <label for="email" class="py-2"><span class="font-medium text-sm">Email Address<span
+                                                class="text-red-500">*</span></span></label>
+                                    <div class="pb-2 md:pb-4">
+                                        <input class="ring-1 ring-gray-300 focus:outline-none focus:ring-red-600 
+                                            focus:ring-2 w-full px-2 rounded-lg py-1" type="text" id="email" name="email"
+                                            required>
+                                    </div>
+
+                                    <label for="message" class="py-2"><span class="font-medium text-sm">Message<span
+                                                class="text-red-500">*</span></span></label>
+                                    </label>
+                                    <div class="pb-2">
+                                        <textarea class="ring-1 ring-gray-300 focus:outline-none focus:ring-red-600
+                                            focus:ring-2 w-full pb-16 resize-none py-2 px-2 rounded-lg " type="text"
+                                            id="message" name="message" required>
+                    </textarea>
+                                    </div>
+                                    <div class="py-4">
+                                        <a href="mailto:clientservices@mobivs.com?subject=Business+Account"
+                                            class="bg-red-500 px-10 py-2 rounded-lg"><button type="submit"
+                                                class="text-white font-semibold text-lg">
+                                                Submit</button></a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
         </div>
     </section>
+
+
+    <!-- Modal -->
+    <div class="hidden">
+        <div class="fixed inset-0 size-auto max-h-none max-w-none overflow-auto bg-transparent backdrop:bg-transparent z-50">
+            <div class="fixed inset-0 bg-gray-500/75 transition-opacity"></div>
+
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relatieve transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg max-h-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style="height: 1400px">
+                        content here is wide
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
 
     <!-- Footer -->
     <footer class="bg-black">
