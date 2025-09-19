@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class ContactFormController extends Controller
 {
@@ -14,5 +18,14 @@ class ContactFormController extends Controller
     {
         Log::debug('Input data', $request->all());
         // return redirect('/');
+        Mail::to("clientservices@mobivs.com")
+        ->send(new ContactMail());
+        
+          $name = $request->input('full-name');
+         
+
+        
+
+       
     }
 }

@@ -563,7 +563,7 @@ Authorization: Bearer YOUR_API_KEY
                 <div>
                     <p class="text-white font-bold text-lg">Resources</p>
                     <ul class="py-2">
-                        <li class="text-gray-400 pt-3 hover:text-white"><a href="#">API Docs</a></li>
+                        <li class="text-gray-400 pt-3 hover:text-white"><a href="https://via.placeholder.com/500x400">API Docs</a></li>
                         <li class="text-gray-400 pt-2 hover:text-white"><a href="#">Support/Help Center</a></li>
                     </ul>
                 </div>
