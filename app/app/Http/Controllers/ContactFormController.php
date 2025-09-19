@@ -16,16 +16,17 @@ class ContactFormController extends Controller
      */
     public function __invoke(Request $request)
     {
-        Log::debug('Input data', $request->all());
-        // return redirect('/');
+//        $requestData = $request->all();
+
+        $name = $request->input('full-name');
+        $email = $request->input('email');
+        $message = $request->input('message');
+
+        $contactMailer = new ContactMail(name: $name, email: $email, message: $message);
+
         Mail::to("clientservices@mobivs.com")
-        ->send(new ContactMail());
-        
-          $name = $request->input('full-name');
-         
+            ->send($contactMailer);
 
-        
-
-       
+        return redirect('/');
     }
 }

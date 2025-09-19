@@ -13,12 +13,18 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public string $name;
+    public string $email;
+    public string $message;
+
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(string $name, string $email, string $message)
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->message = $message;
     }
 
     /**
